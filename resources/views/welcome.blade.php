@@ -18,20 +18,20 @@
         </div>
     </nav>
 
-<<<<<<< HEAD
-    <div>
-    <h1 class="text-3xl font-bold">Welcome to Chirper!</h1>
-    <p>This is your brand new Laravel app. Time to make it sing (or chirp)!</p>
-    <p class="mt-2 text-sm text-gray-600">Now this is live on the internet! 🎉🚀</p>
-=======
-    <div class="flex items-center justify-center min-h-[70vh] px-4">
-        <div class="bg-white p-12 rounded-2xl shadow-xl border border-gray-100 max-w-2xl w-full text-center">
-            <h1 class="text-4xl font-extrabold text-gray-900 mb-4 tracking-tight">Welcome to Chirper!</h1>
-            <p class="text-gray-500 text-lg leading-relaxed">
-                This is your brand new Laravel application. Time to make it sing (or chirp)!
-            </p>
-        </div>
->>>>>>> d1ac661ce3f7a5edde346f3053877639c62c31f3
+    <div class="max-w-2xl mx-auto mt-10 px-4">
+        
+        <h1 class="text-3xl font-bold mb-6 text-center">
+            Welcome to Chirper!
+        </h1>
+
+        @foreach ($chirps as $chirp)
+            <div class="bg-white shadow-md rounded-xl p-4 mb-4">
+                <div class="font-bold">{{ $chirp['author'] }}</div>
+                <div class="mt-1">{{ $chirp['message'] }}</div>
+                <div class="text-sm text-gray-500 mt-2">{{ $chirp['time'] }}</div>
+            </div>
+        @endforeach
+
     </div>
 
     <footer class="fixed bottom-10 left-0 right-0 flex justify-center">
